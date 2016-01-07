@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM openjdk-8u66-jdk
 
 MAINTAINER joaobrito
 
