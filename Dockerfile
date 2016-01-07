@@ -1,4 +1,4 @@
-FROM 8-jdk
+FROM java:8-jdk
 
 MAINTAINER joaobrito
 
