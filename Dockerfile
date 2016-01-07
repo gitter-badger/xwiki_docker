@@ -1,4 +1,4 @@
-FROM openjdk-8u66-jdk
+FROM 8-jdk
 
 MAINTAINER joaobrito
 
