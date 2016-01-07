@@ -6,7 +6,7 @@ ENV XWIKI_HOME=/home/xwiki_home
 
 RUN mkdir -p ${XWIKI_HOME}
 
-EXPOSE 80/tcp 443/tcp
+EXPOSE 8080/tcp 443/tcp
 
 VOLUME ["${XWIKI_HOME}"]
 
