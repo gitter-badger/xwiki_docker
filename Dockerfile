@@ -1,4 +1,4 @@
-FROM java:8-jdk
+FROM ubuntu 15.04
 
 MAINTAINER joaobrito
 
@@ -6,7 +6,7 @@ ENV XWIKI_HOME=/home/xwiki_home \
     XWIKI_VERSION=7.4
 
 RUN apt-get update -y \
- && apt-get install wget vim -y \
+ && apt-get install openjdk-7-jre wget vim -y \
  && mkdir -p ${XWIKI_HOME} \
  && cd ${XWIKI_HOME} \
  && wget http://download.forge.ow2.org/xwiki/xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip \
