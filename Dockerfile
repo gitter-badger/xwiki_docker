@@ -9,14 +9,14 @@ RUN apt-get update -y \
  && apt-get install -y openjdk-7-jre wget unzip vim \
  && mkdir -p ${XWIKI_HOME} \
  && cd ${XWIKI_HOME} \
- && wget http://download.forge.ow2.org/xwiki/xwiki-enterprise-jetty-hsqldb-"$XWIKI_VERSION".zip \
- && unzip xwiki-enterprise-jetty-hsqldb-"$XWIKI_VERSION".zip -d . \
- && rm -rf xwiki-enterprise-jetty-hsqldb-"$XWIKI_VERSION".zip
+ && wget http://download.forge.ow2.org/xwiki/xwiki-enterprise-jetty-hsqldb-$XWIKI_VERSION.zip \
+ && unzip xwiki-enterprise-jetty-hsqldb-$XWIKI_VERSION.zip -d . \
+ && rm -rf xwiki-enterprise-jetty-hsqldb-$XWIKI_VERSION.zip
 
 EXPOSE 8080/tcp 443/tcp
 
-VOLUME ["${XWIKI_HOME}"]
+VOLUME ["${XWIKI_HOME}/xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}"]
 
-WORKDIR "$XWIKI_HOME"/xwiki-enterprise-jetty-hsqldb-"$XWIKI_VERSION"
+WORKDIR $XWIKI_HOME/xwiki-enterprise-jetty-hsqldb-$XWIKI_VERSION
 
-ENTRYPOINT ["$XWIKI_HOME/xwiki-enterprise-jetty-hsqldb-$XWIKI_VERSION/start_xwiki.sh"]
+ENTRYPOINT ["${XWIKI_HOME}/xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}/start_xwiki.sh"]
