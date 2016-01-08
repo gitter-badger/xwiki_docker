@@ -2,7 +2,7 @@ FROM java:8-jdk
 
 MAINTAINER joaobrito
 
-ENV XWIKI_HOME=/home/xwiki_home
+ENV XWIKI_HOME=/home/xwiki_home \
     XWIKI_VERSION=7.4
 
 RUN apt-get update -y \
