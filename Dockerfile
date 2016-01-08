@@ -6,7 +6,7 @@ ENV XWIKI_HOME=/home/xwiki_home \
     XWIKI_VERSION=7.4
 
 RUN apt-get update -y \
- && apt-get install -y openjdk-7-jre wget zip vim \
+ && apt-get install -y openjdk-7-jre wget unzip vim \
  && mkdir -p ${XWIKI_HOME} \
  && cd ${XWIKI_HOME} 
  
