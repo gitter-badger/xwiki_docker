@@ -16,6 +16,6 @@ EXPOSE 8080/tcp 443/tcp
 
 VOLUME ["${XWIKI_HOME}"]
 
-WORKDIR ${XWIKI_HOME}
+WORKDIR "$XWIKI_HOME"/xwiki-enterprise-jetty-hsqldb-"$XWIKI_VERSION"
 
 ENTRYPOINT ["./start_xwiki.sh"]
