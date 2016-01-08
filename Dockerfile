@@ -10,8 +10,8 @@ RUN apt-get update -y \
  && mkdir -p ${XWIKI_HOME} \
  && cd ${XWIKI_HOME} \
  && wget http://download.forge.ow2.org/xwiki/xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip \
- && unzip xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip \
- && rm -f xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip
+ && unzip xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip 
+ #&& rm -f xwiki-enterprise-jetty-hsqldb-${XWIKI_VERSION}.zip
 
 EXPOSE 8080/tcp 443/tcp
 
