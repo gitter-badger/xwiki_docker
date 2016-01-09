@@ -12,6 +12,6 @@ RUN apt-get update -y \
 
 EXPOSE 8080/tcp 443/tcp
 
-VOLUME ["/home/xwiki_home"]
+VOLUME /home/xwiki_home
 WORKDIR /home/xwiki_home/xwiki-enterprise-jetty-hsqldb-7.4
 ENTRYPOINT ["./start_xwiki.sh"]
