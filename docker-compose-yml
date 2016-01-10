@@ -1,8 +1,0 @@
-xwiki:
-  image: jbrito78/xwiki
-  user: root
-  ports:
-   - "8082:8080"
-   - "9443:443"
-  volumes:
-   - /home/admin/docker/xwiki/xwiki_home:/home/xwiki_home
